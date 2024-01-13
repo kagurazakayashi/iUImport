@@ -19,8 +19,8 @@ class FileModel: Identifiable {
 
 // 結構體 ContentView 繼承自 View 協定
 struct ContentView: View {
-    @State var files = [FileModel(name: "行1", info: "行1内容"),
-                         FileModel(name: "行2", info: "行2内容")]
+    let mgr = DocumentsManager()
+    @State var files = [FileModel]()
     var body: some View {
         NavigationView {
             List(files) { file in
@@ -39,6 +39,7 @@ struct ContentView: View {
         }
         .onAppear {
             // 加载文档
+            
         }
     }
 }
