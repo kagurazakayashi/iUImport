@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5337AF452B92E4CB006318C8 /* DocumentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5337AF442B92E4CB006318C8 /* DocumentsManager.swift */; };
+		5337AF472B931DAF006318C8 /* PhotoLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5337AF462B931DAF006318C8 /* PhotoLibraryManager.swift */; };
 		53878D022B92C6B700EF9C9D /* iuimportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53878D012B92C6B700EF9C9D /* iuimportApp.swift */; };
 		53878D042B92C6B700EF9C9D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53878D032B92C6B700EF9C9D /* ContentView.swift */; };
 		53878D062B92C6B800EF9C9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53878D052B92C6B800EF9C9D /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* Begin PBXFileReference section */
 		5337AF432B92CCAD006318C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5337AF442B92E4CB006318C8 /* DocumentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsManager.swift; sourceTree = "<group>"; };
+		5337AF462B931DAF006318C8 /* PhotoLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryManager.swift; sourceTree = "<group>"; };
 		53878CFE2B92C6B700EF9C9D /* iuimport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iuimport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53878D012B92C6B700EF9C9D /* iuimportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iuimportApp.swift; sourceTree = "<group>"; };
 		53878D032B92C6B700EF9C9D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				53878D052B92C6B800EF9C9D /* Assets.xcassets */,
 				53878D072B92C6B800EF9C9D /* Preview Content */,
 				5337AF442B92E4CB006318C8 /* DocumentsManager.swift */,
+				5337AF462B931DAF006318C8 /* PhotoLibraryManager.swift */,
 			);
 			path = iuimport;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				53878D042B92C6B700EF9C9D /* ContentView.swift in Sources */,
 				53878D022B92C6B700EF9C9D /* iuimportApp.swift in Sources */,
+				5337AF472B931DAF006318C8 /* PhotoLibraryManager.swift in Sources */,
 				5337AF452B92E4CB006318C8 /* DocumentsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +288,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iuimport/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = " iUImport";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To save your media files to the album, please allow access to the album.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -319,7 +323,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iuimport/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = " iUImport";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To save your media files to the album, please allow access to the album.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

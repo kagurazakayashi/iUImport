@@ -15,6 +15,7 @@ class FileInfoModel: Identifiable {
     var size: Int = 0
     var creation: Date = Date()
     var modification: Date = Date()
+    var status: Int8 = 0
 }
 
 class DocumentsManager {
@@ -36,13 +37,13 @@ class DocumentsManager {
                 model.size = attributes[.size] as! Int
                 model.creation = attributes[.creationDate] as! Date
                 model.modification = attributes[.modificationDate] as! Date
+//                print(model.name,model.path,model.size,model.creation,model.modification)
                 allFiles.append(model)
             }
         } catch {
             print("Error getting contents of directory: \(error)")
             return []
         }
-        print(allFiles)
         return allFiles
     }
     
@@ -102,5 +103,15 @@ class DocumentsManager {
 //        let image = UIImage(cgImage: imageRef)
         return UIImage(cgImage: imageRef)
     }
-
+    
+    func indexFileInfoModel(fileInfos:[FileInfoModel], path:String) -> Int {
+        var i = 0;
+        for fileInfo in fileInfos {
+            if (fileInfo.path == path) {
+                return i
+            }
+            i = i + 1
+        }
+        return -1;
+    }
 }
