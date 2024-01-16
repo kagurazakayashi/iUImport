@@ -288,7 +288,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iuimport/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To save your media files to the album, please allow access to the album.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "您必须允许相册访问权限，才能写入新的媒体。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -323,7 +323,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iuimport/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To save your media files to the album, please allow access to the album.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "您必须允许相册访问权限，才能写入新的媒体。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

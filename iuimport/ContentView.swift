@@ -18,6 +18,9 @@ struct ContentView: View {
     @State var imagePaths:[String] = [String]()
     @State var savedStatus: [Int8] = []
     @State var savedStatusStr: [String] = []
+    @State var alertInfo: [String] = []
+    @State var alertVisibled: Bool = false
+    @State var working: Bool = false
     var body: some View {
         NavigationView {
             List($files, id: \.path) { $file in
@@ -73,13 +76,26 @@ struct ContentView: View {
                 }
             }
             .toolbar {
-                Button(action: {
-                    // TODO: 选择文件
-                }) {
-                    Text("选择文件")
+                if working {
+                    ProgressView()
+                } else {
+                    Button(action: {
+                        photoLibraryMgr.saveToPhotoLibrary(view: self)
+                    }) {
+                        Image(systemName: "arrow.triangle.2.circlepath")
+                    }
                 }
             }
             .navigationTitle("保存到相册")
+            .alert(isPresented: $alertVisibled) {
+                Alert(
+                    title: Text(alertInfo[0]),
+                    message: Text(alertInfo[1]),
+                    dismissButton: .default(Text("OK"), action: {
+                        self.alertVisibled = false
+                    })
+                )
+            }
         }
         .onAppear {
             photoLibraryMgr.saveToPhotoLibrary(view: self)
