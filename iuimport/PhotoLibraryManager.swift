@@ -49,17 +49,19 @@ class PhotoLibraryManager {
         view.files = []
         let files:[FileInfoModel] = view.mgr.getDocumentsFiles()
         let fileCount:Int = files.count
-        if hasPhotoWritePermission(view: view) == false {
+        let permission = hasPhotoWritePermission(view: view)
+        if (fileCount == 0) {
+            view.alertInfo = ["没有文件", "缓存区中没有照片或视频，请连接 iTunes 导入至本 APP 的文档中。"]
+            view.alertVisibled = true
+        }
+        if (permission == false) {
             if (fileCount > 0) {
                 view.savedStatus = Array(repeating: -1, count: fileCount)
                 view.savedStatusStr = Array(repeating: "没有相册写入权限", count: fileCount)
                 view.files = files
             }
-            return
         }
-        if (fileCount == 0) {
-            view.alertInfo = ["没有文件", "缓存区中没有照片或视频，请连接 iTunes 导入至本 APP 的文档中。"]
-            view.alertVisibled = true
+        if (fileCount == 0 || permission == false) {
             return
         }
         view.savedStatus = Array(repeating: 0, count: fileCount)
@@ -84,18 +86,19 @@ class PhotoLibraryManager {
                             if (success) {
                                 view.savedStatus[index] = 1
                                 view.savedStatusStr[index] = "保存成功"
+                                if (self.deleteFile(atPath: file.path) == false) {
+                                    view.savedStatus[index] = -1
+                                    view.savedStatusStr[index] = "删除缓存文件失败"
+                                }
                             } else {
                                 view.savedStatus[index] = -1
                                 view.savedStatusStr[index] = "保存失败 " + (error?.localizedDescription ?? "")
+                                print(view.savedStatusStr[index])
                             }
                         })
                 } else {
                     view.savedStatus[index] = -1
                     view.savedStatusStr[index] = "不支持的文件格式"
-                }
-                if (self.deleteFile(atPath: file.path) == false) {
-                    view.savedStatus[index] = -1
-                    view.savedStatusStr[index] = "删除缓存文件失败"
                 }
             }
             if (i == fileCount) {
