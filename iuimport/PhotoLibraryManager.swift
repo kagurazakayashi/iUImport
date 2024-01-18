@@ -19,12 +19,14 @@ class PhotoLibraryManager {
             return true
         case .notDetermined:
             Task {
-                await PHPhotoLibrary.requestAuthorization(for: .readWrite)
+                PHPhotoLibrary.requestAuthorization(for: .readWrite) {_ in
+                    _ = self.hasPhotoWritePermission(view: view);
+                }
             }
             return false
 //        case .denied, .restricted, .limited:
         default:
-            view.alertInfo = ["没有相册写入权限", "您必须允许相册访问权限，才能写入新的媒体。"]
+            view.alertInfo = [String(localized: "No album write permission!"), String(localized: "You must allow album access to write new media.")]
             view.alertVisibled = true
             return false
         }
@@ -51,13 +53,13 @@ class PhotoLibraryManager {
         let fileCount:Int = files.count
         let permission = hasPhotoWritePermission(view: view)
         if (fileCount == 0) {
-            view.alertInfo = ["没有文件", "缓存区中没有照片或视频，请连接 iTunes 导入至本 APP 的文档中。"]
+            view.alertInfo = [String(localized: "No file"), String(localized: "There are no photos or videos in the cache, please connect to iTunes to import them into the documents of this APP.")]
             view.alertVisibled = true
         }
         if (permission == false) {
             if (fileCount > 0) {
                 view.savedStatus = Array(repeating: -1, count: fileCount)
-                view.savedStatusStr = Array(repeating: "没有相册写入权限", count: fileCount)
+                view.savedStatusStr = Array(repeating: String(localized: "No album write permission!"), count: fileCount)
                 view.files = files
             }
         }
@@ -65,7 +67,7 @@ class PhotoLibraryManager {
             return
         }
         view.savedStatus = Array(repeating: 0, count: fileCount)
-        view.savedStatusStr = Array(repeating: "正在保存到相册", count: fileCount)
+        view.savedStatusStr = Array(repeating: String(localized: "Saving to album ..."), count: fileCount)
         view.files = files
         view.working = true
         var i = 0
@@ -85,20 +87,20 @@ class PhotoLibraryManager {
                         , completionHandler: { success, error in
                             if (success) {
                                 view.savedStatus[index] = 1
-                                view.savedStatusStr[index] = "保存成功"
+                                view.savedStatusStr[index] = String(localized: "Saved successfully.")
                                 if (self.deleteFile(atPath: file.path) == false) {
                                     view.savedStatus[index] = -1
-                                    view.savedStatusStr[index] = "删除缓存文件失败"
+                                    view.savedStatusStr[index] = "Failed to delete cache files!"
                                 }
                             } else {
                                 view.savedStatus[index] = -1
-                                view.savedStatusStr[index] = "保存失败 " + (error?.localizedDescription ?? "")
+                                view.savedStatusStr[index] = String(localized: "Save failed!") + " " + (error?.localizedDescription ?? "")
                                 print(view.savedStatusStr[index])
                             }
                         })
                 } else {
                     view.savedStatus[index] = -1
-                    view.savedStatusStr[index] = "不支持的文件格式"
+                    view.savedStatusStr[index] = String(localized: "Unsupported file format!")
                 }
             }
             if (i == fileCount) {

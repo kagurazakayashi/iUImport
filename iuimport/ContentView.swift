@@ -86,7 +86,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("保存到相册")
+            .navigationTitle("Save into the album")
             .alert(isPresented: $alertVisibled) {
                 Alert(
                     title: Text(alertInfo[0]),

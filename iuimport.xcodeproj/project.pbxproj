@@ -13,6 +13,7 @@
 		53878D042B92C6B700EF9C9D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53878D032B92C6B700EF9C9D /* ContentView.swift */; };
 		53878D062B92C6B800EF9C9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53878D052B92C6B800EF9C9D /* Assets.xcassets */; };
 		53878D092B92C6B800EF9C9D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53878D082B92C6B800EF9C9D /* Preview Assets.xcassets */; };
+		53D9B46B2B95A98400F6D9E7 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 53D9B46A2B95A98400F6D9E7 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		53878D032B92C6B700EF9C9D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		53878D052B92C6B800EF9C9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53878D082B92C6B800EF9C9D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		53D9B46A2B95A98400F6D9E7 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		53878CF52B92C6B700EF9C9D = {
 			isa = PBXGroup;
 			children = (
+				53D9B46A2B95A98400F6D9E7 /* Localizable.xcstrings */,
 				53878D002B92C6B700EF9C9D /* iuimport */,
 				53878CFF2B92C6B700EF9C9D /* Products */,
 			);
@@ -117,6 +120,9 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
+				ja,
 			);
 			mainGroup = 53878CF52B92C6B700EF9C9D;
 			productRefGroup = 53878CFF2B92C6B700EF9C9D /* Products */;
@@ -135,6 +141,7 @@
 			files = (
 				53878D092B92C6B800EF9C9D /* Preview Assets.xcassets in Resources */,
 				53878D062B92C6B800EF9C9D /* Assets.xcassets in Resources */,
+				53D9B46B2B95A98400F6D9E7 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,11 +298,12 @@
 				INFOPLIST_FILE = iuimport/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = iUImport;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "您必须允许相册访问权限，才能写入新的媒体。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "You must allow album access to write new media.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +313,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Yashi_iOSDevelopment_uuumoe_20230209;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,11 +340,12 @@
 				INFOPLIST_FILE = iuimport/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = iUImport;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "您必须允许相册访问权限，才能写入新的媒体。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "You must allow album access to write new media.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,6 +355,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Yashi_iOSDevelopment_uuumoe_20230209;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
