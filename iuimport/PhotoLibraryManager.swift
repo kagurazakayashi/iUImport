@@ -11,6 +11,7 @@ import UIKit
 
 class PhotoLibraryManager {
     let photoLibrary: PHPhotoLibrary = PHPhotoLibrary.shared()
+    var saveIndex: Int = -1
     
     func hasPhotoWritePermission(view:ContentView) -> Bool {
         let status:PHAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
@@ -70,42 +71,45 @@ class PhotoLibraryManager {
         view.savedStatusStr = Array(repeating: String(localized: "Saving to album ..."), count: fileCount)
         view.files = files
         view.working = true
-        var i = 0
-        for file in view.files {
-            i = i + 1
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(i)) {
-                let index = view.mgr.indexFileInfoModel(fileInfos: view.files, path: file.path)
-                let extName:String = view.mgr.getExtension(fromPath: file.path)
-                let iconName:String = view.mgr.getIconName(extName: extName)
-                let url:URL = URL(fileURLWithPath: file.path)
-                if (iconName == "photo" || iconName == "video") {
-                    let isVideo:Bool = (iconName == "video")
-                    view.photoLibrary.performChanges(
-                        isVideo
-                        ? {PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)}
-                        : {PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: url)}
-                        , completionHandler: { success, error in
-                            if (success) {
-                                view.savedStatus[index] = 1
-                                view.savedStatusStr[index] = String(localized: "Saved successfully.")
-                                if (self.deleteFile(atPath: file.path) == false) {
-                                    view.savedStatus[index] = -1
-                                    view.savedStatusStr[index] = "Failed to delete cache files!"
-                                }
-                            } else {
-                                view.savedStatus[index] = -1
-                                view.savedStatusStr[index] = String(localized: "Save failed!") + " " + (error?.localizedDescription ?? "")
-                                print(view.savedStatusStr[index])
-                            }
-                        })
-                } else {
-                    view.savedStatus[index] = -1
-                    view.savedStatusStr[index] = String(localized: "Unsupported file format!")
-                }
-            }
-            if (i == fileCount) {
-                view.working = false
-            }
+        saveIndex = 0
+        saveOnce(view: view)
+    }
+    
+    func saveOnce(view:ContentView) {
+        let file: FileInfoModel = view.files[saveIndex]
+        let index = view.mgr.indexFileInfoModel(fileInfos: view.files, path: file.path)
+        let extName:String = view.mgr.getExtension(fromPath: file.path)
+        let iconName:String = view.mgr.getIconName(extName: extName)
+        let url:URL = URL(fileURLWithPath: file.path)
+        if (iconName == "photo" || iconName == "video") {
+            let isVideo:Bool = (iconName == "video")
+            view.photoLibrary.performChanges(
+                isVideo
+                ? {PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)}
+                : {PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: url)}
+                , completionHandler: { success, error in
+                    if (success) {
+                        view.savedStatus[index] = 1
+                        view.savedStatusStr[index] = String(localized: "Saved successfully.")
+                        if (self.deleteFile(atPath: file.path) == false) {
+                            view.savedStatus[index] = -1
+                            view.savedStatusStr[index] = "Failed to delete cache files!"
+                        }
+                    } else {
+                        view.savedStatus[index] = -1
+                        view.savedStatusStr[index] = String(localized: "Save failed!") + " " + (error?.localizedDescription ?? "")
+                        print(view.savedStatusStr[index])
+                    }
+                })
+        } else {
+            view.savedStatus[index] = -1
+            view.savedStatusStr[index] = String(localized: "Unsupported file format!")
+        }
+        saveIndex = saveIndex + 1
+        if (saveIndex == view.files.count) {
+            view.working = false
+        } else {
+            saveOnce(view: view)
         }
     }
 }
