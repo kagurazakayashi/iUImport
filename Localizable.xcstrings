@@ -93,6 +93,17 @@
         }
       }
     },
+    "NSPhotoLibraryUsageDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AAAA"
+          }
+        }
+      }
+    },
     "OK" : {
       "localizations" : {
         "ja" : {
