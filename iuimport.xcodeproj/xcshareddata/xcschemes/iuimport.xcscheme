@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "53878CFD2B92C6B700EF9C9D"
-               BuildableName = "iuimport.app"
-               BlueprintName = "iuimport"
+               BuildableName = "PhotoCable.app"
+               BlueprintName = "PhotoCable"
                ReferencedContainer = "container:iuimport.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,8 +44,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "53878CFD2B92C6B700EF9C9D"
-            BuildableName = "iuimport.app"
-            BlueprintName = "iuimport"
+            BuildableName = "PhotoCable.app"
+            BlueprintName = "PhotoCable"
             ReferencedContainer = "container:iuimport.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,8 +61,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "53878CFD2B92C6B700EF9C9D"
-            BuildableName = "iuimport.app"
-            BlueprintName = "iuimport"
+            BuildableName = "PhotoCable.app"
+            BlueprintName = "PhotoCable"
             ReferencedContainer = "container:iuimport.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

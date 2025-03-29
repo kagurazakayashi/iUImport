@@ -99,7 +99,25 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "AAAA"
+            "value" : "The function of this software is to import your copied photos into your albums, so it requires you to provide album access."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このソフトウェアの機能は、コピーした写真をアルバムにインポートすることなので、アルバムへのアクセスを提供する必要があります。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本软件的功能是向您的相册中导入您复制的照片，因此需要您提供相册访问权限。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本軟體的功能是向您的相簿中匯入您複製的照片，因此需要您提供相簿訪問許可權。"
           }
         }
       }

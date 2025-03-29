@@ -8,7 +8,25 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "iUImport"
+            "value" : "PhotoCable"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "影線"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "影线"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "影線"
           }
         }
       }
@@ -20,7 +38,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "iuimport"
+            "value" : "PhotoCable"
           }
         }
       }
@@ -31,25 +49,25 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "You must allow album access to write new media."
+            "value" : "The function of this software is to import your copied photos into your albums, so it requires you to provide album access."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "新しいメディアに書き込むには、アルバムへのアクセスを許可する必要があります。"
+            "value" : "このソフトウェアの機能は、コピーした写真をアルバムにインポートすることなので、アルバムへのアクセスを提供する必要があります。"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "您必须允许相册访问权限，才能写入新的媒体。"
+            "value" : "本软件的功能是向您的相册中导入您复制的照片，因此需要您提供相册访问权限。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "您必須允許相簿訪問許可權，才能寫入新的媒體。"
+            "value" : "本軟體的功能是向您的相簿中匯入您複製的照片，因此需要您提供相簿訪問許可權。"
           }
         }
       }

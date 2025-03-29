@@ -22,7 +22,7 @@
 		5337AF432B92CCAD006318C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5337AF442B92E4CB006318C8 /* DocumentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsManager.swift; sourceTree = "<group>"; };
 		5337AF462B931DAF006318C8 /* PhotoLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryManager.swift; sourceTree = "<group>"; };
-		53878CFE2B92C6B700EF9C9D /* iuimport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iuimport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53878CFE2B92C6B700EF9C9D /* PhotoCable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoCable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53878D012B92C6B700EF9C9D /* iuimportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iuimportApp.swift; sourceTree = "<group>"; };
 		53878D032B92C6B700EF9C9D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		53878D052B92C6B800EF9C9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		53878CFF2B92C6B700EF9C9D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				53878CFE2B92C6B700EF9C9D /* iuimport.app */,
+				53878CFE2B92C6B700EF9C9D /* PhotoCable.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,9 +84,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		53878CFD2B92C6B700EF9C9D /* iuimport */ = {
+		53878CFD2B92C6B700EF9C9D /* PhotoCable */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53878D0C2B92C6B800EF9C9D /* Build configuration list for PBXNativeTarget "iuimport" */;
+			buildConfigurationList = 53878D0C2B92C6B800EF9C9D /* Build configuration list for PBXNativeTarget "PhotoCable" */;
 			buildPhases = (
 				53878CFA2B92C6B700EF9C9D /* Sources */,
 				53878CFB2B92C6B700EF9C9D /* Frameworks */,
@@ -96,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = iuimport;
+			name = PhotoCable;
 			productName = iuimport;
-			productReference = 53878CFE2B92C6B700EF9C9D /* iuimport.app */;
+			productReference = 53878CFE2B92C6B700EF9C9D /* PhotoCable.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				53878CFD2B92C6B700EF9C9D /* iuimport */,
+				53878CFD2B92C6B700EF9C9D /* PhotoCable */,
 			);
 		};
 /* End PBXProject section */
@@ -300,7 +300,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iuimport/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = iUImport;
+				INFOPLIST_KEY_CFBundleDisplayName = PhotoCable;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -342,7 +342,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iuimport/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = iUImport;
+				INFOPLIST_KEY_CFBundleDisplayName = PhotoCable;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -381,7 +381,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53878D0C2B92C6B800EF9C9D /* Build configuration list for PBXNativeTarget "iuimport" */ = {
+		53878D0C2B92C6B800EF9C9D /* Build configuration list for PBXNativeTarget "PhotoCable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53878D0D2B92C6B800EF9C9D /* Debug */,

@@ -1,14 +1,14 @@
-# iUImport
+# PhotoCable
 
 ![Icon](icon.png)
 
 [简体中文](README.md) | [繁體中文](README.zh-hant.md) | [English](README.en.md) | [日本語](README.ja.md)
 
-**Easily import photos or videos to iOS photo album via data cable.**
+**Easily import photos or videos into iOS albums via cable.**
 
-If there is no Internet or LAN connection, and only a data cable is connected to the computer, transferring specified photos or videos to the photo album of the iOS device is a troublesome task. This tool makes it easier for you to do this.
+Transferring photos or videos to your device's album may be a hassle when there is no Internet and LAN connection and only a data cable to connect to your PC. This tool can make you accomplish this task more easily.
 
-## System Requirements
+## system requirements
 
 - `iOS` ≥ 15.0
 - Language: `zh-hans`, `zh-hant`, `ja`, `en`
@@ -18,52 +18,50 @@ If there is no Internet or LAN connection, and only a data cable is connected to
 - `Xcode` ≥ 15.0 (`SwiftUI`)
 - `iOS SDK` ≥ 17
 
-## download
+## downloading
 
-Since the author currently does not have an Apple developer account, it has not been uploaded to the App Store yet. Currently it can only be compiled and installed using Xcode.
+Since the author does not currently have an Apple developer account, it has not been uploaded to the App Store at this time. Currently it can only be compiled and installed using Xcode.
 
 ## Instructions for use
 
-### Windows
+### Windows (computer)
 
-0. Download and install this software.
-1. Connect the device to the computer via USB.
-2. Open `iTunes`.
-3. Click the phone icon button above `iTunes` and you will see your device information page.
-4. Click `File Sharing` on the left and select `iUImport`.
-5. Drag the image or video file you want to copy to the file list box.
-6. Start this program. If the program is already started, press the refresh button in the upper right corner to import new files.
+1. Download and install this software.
+2. Connect the device to the computer via USB.
+3. Open `iTunes` .
+4. Clicking on the phone icon button above `iTunes` will take you to your device information page.
+5. Click `File Sharing` on the left and select `iUImport`.
+6. Drag and drop the picture or video file you want to copy into the file list box.
+7. Start this program. If this program has already started, press the Refresh button in the upper right corner to import a new file.
 
-- When importing for the first time, an album permission prompt will pop up, please select `Allow all` to write new files. This program does not contain photo album reading code.
+- When importing for the first time, an album permission prompt will pop up, please select `Allow All` in order to write the new file. This program does not contain album reading code.
 
-For more connection instructions, please refer to Apple’s official documentation:
-<https://support.apple.com/zh-cn/guide/itunes/itns32636/windows>
+See official Apple documentation for more connection instructions: [https://support.apple.com/zh-cn/guide/itunes/itns32636/windows](https://support.apple.com/zh-cn/guide/itunes/itns32636/windows)
 
 ### macOS
 
-0. Download and install this software.
-1. Connect the device to the computer via USB.
-2. Open `Finder`.
-3. Select your device in the left column of `Finder` to enter your device information page.
-4. Click `File` above and select `iUImport`.
-5. Drag the image or video file you want to copy to the `iUImport` item.
-6. Start this program. If the program is already started, press the refresh button in the upper right corner to import new files.
-7. The program will automatically copy the file just imported to the album.
+1. Download and install this software.
+2. Connect the device to the computer via USB.
+3. Open `Finder` .
+4. Select your device in the `Finder` left sidebar to go to your device information page.
+5. Click `File` above and select `iUImport`.
+6. Drag and drop the image or video file you want to copy to the `iUImport` item.
+7. Start this program. If this program has already started, press the Refresh button in the upper right corner to import a new file.
+8. The program will automatically copy the files you just imported into the album.
 
-- When importing for the first time, an album permission prompt will pop up, please select `Allow all` to write new files. This program does not contain photo album reading code.
+- When importing for the first time, an album permission prompt will pop up, please select `Allow All` in order to write the new file. This program does not contain album reading code.
 
-For more connection instructions, please refer to Apple’s official documentation:
-<https://support.apple.com/zh-cn/guide/mac-help/mchl4bd77d3a/mac>
+See official Apple documentation for more connection instructions: [https://support.apple.com/zh-cn/guide/mac-help/mchl4bd77d3a/mac](https://support.apple.com/zh-cn/guide/mac-help/mchl4bd77d3a/mac)
 
-## privacy
+## private business
 
 This program will not do any of the following:
 
-- Internet or LAN communication (if a networking prompt pops up, you can directly select `Not Allowed`)
+- Internet or LAN communication (you can simply select `Don't Allow` if the networking prompt pops up)
 - Collect or send your photos or videos to third parties
-- Fee
-- Display ads
-- Read the contents of the album (because the function of this program is only writing)
+- charge
+- Display Ads
+- Read album contents (since the function of this program is only to write)
 
 ## LICENSE
 
